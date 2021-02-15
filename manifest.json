@@ -1,0 +1,28 @@
+{
+    "author":"https://github.com/sheepinc/kiyori-saifu",
+    "description":"Zenzo web3 extension wallet",
+    "name": "Kiyori saifu wallet",
+    "manifest_version": 2,
+    "icons": {
+        "16": "favicon.png",
+        "48": "favicon.png",
+        "128": "favicon.png"
+    },
+    "content_scripts":[
+        {
+            "js":"js/content_scripts"
+        }
+    ],
+    "browser_action":{
+        "default_icon":"favicon.png ",
+        "default_popup": "popup.html"
+    },
+    "background" : {
+        "scripts" : ["js/background.js","globalthis.js"],
+        "persistent" : true
+    },
+    "permissions": [ "storage", "unlimitedStorage", "clipboardWrite", "activeTab", "webRequest", "notifications" ],
+    "key":"todo",
+    "version":"1.0.0",
+    "update_url":"TBD"
+}
